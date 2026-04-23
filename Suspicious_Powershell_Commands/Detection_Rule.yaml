@@ -1,7 +1,3 @@
-***This is my 2nd validated rule to detect almost every abnormal powershell activity.***
-
-
-```
 title: Suspicious PowerShell Execution Patterns
 id: 0fdd6acd-9878-40f7-8a82-af40c4a11a41
 description: Detects Suspicious PowerShell Execution Patterns
@@ -12,17 +8,14 @@ date: 2026/04/23
 references:
     - https://attack.mitre.org/techniques/T1059/001/
     - https://github.com/OTRF/Security-Datasets
-
 logsource:
     product: windows
     category: process_creation
-
 detection:
     selection:
         Image|endswith:
             - '\powershell.exe'
             - '\pwsh.exe'
-    
     selection_Parameter:
         CommandLine|contains:
             - '-encoded'
@@ -72,4 +65,3 @@ fields:
     - ParentImage
     - ParentCommandLine
     - User
-    - IntegrityLevel
