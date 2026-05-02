@@ -2,7 +2,7 @@ title: Suspicious PowerShell Execution Patterns
 id: 0fdd6acd-9878-40f7-8a82-af40c4a11a41
 description: Detects PowerShell with encoding, Office spawning PowerShell, and evasion techniques observed in APT29 attacks. Detects suspicious parent processes launching PowerShell with network activity or evasion flags.
 author: Manish Rawat
-status: experimental
+status: test
 date: 2026-04-23
 modified: 2026-05-02
 references:
@@ -60,10 +60,10 @@ falsepositives:
     - legitimate network activity
 level: high
 tags:
-    - attack.t1027
-    - attack.obfuscation
-    - attack.t1059.001
     - attack.execution
+    - attack.t1059.001
+    - attack.obfuscation
+    - attack.t1027
 fields:
     - CommandLine
     - ParentImage
