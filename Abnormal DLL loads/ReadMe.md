@@ -33,4 +33,6 @@ APT29 staged python.exe and loaded modules BEFORE executing the final payload. M
  - Software installers using temporary directories
  - Legitimate portable applications
  - Python development environments 
+
+
 **Note: If you do like my rule then drop a star and share as much as you can or if you didn't like it drop a feedback and suggestion.**
